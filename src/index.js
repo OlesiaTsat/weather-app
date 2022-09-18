@@ -83,4 +83,4 @@ fahrenheiLink.addEventListener("click", displayFahrenheiTemperature);
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
-search("New York");
+search("Kyiv");
