@@ -57,7 +57,7 @@ function displayForecast(response) {
           forecastDay.temp.min
         )}°</span>
       </div>
-      </div>`;
+            </div>`;
     }
   });
 
@@ -65,7 +65,7 @@ function displayForecast(response) {
   forecastElement.innerHTML = forecastHTML;
 }
 function getForecast(coordinates) {
-  console.log(coordinates);
+  //console.log(coordinates);
   let apiKey = "215576bab28022db35e6e64f040e1b56";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
@@ -107,7 +107,9 @@ function handleSubmit(event) {
   event.preventDefault();
   let cityInputElement = document.querySelector("#city-input");
   search(cityInputElement.value);
-  console.log(cityInputElement.value);
+  //console.log(cityInputElement.value);
+  celsiusLink.classList.add("active");
+  fahrenheiLink.classList.remove("active");
 }
 function displayFahrenheiTemperature(event) {
   event.preventDefault();
